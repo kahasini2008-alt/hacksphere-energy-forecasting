@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyGrid | Smart Energy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">SMART ENERGY MANAGEMENT</p>
+            <h1>EnergyGrid</h1>
+        </div>
+        <span class="status"><span class="dot"></span> Forecast System</span>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">ENERGY INTELLIGENCE</p>
+                <h2>Demand & Microgrid Overview</h2>
+                <p>Monitor forecast demand, power-source mode and overload alerts.</p>
+            </div>
+        </section>
+
+        <section class="metrics">
+            <article class="metric">
+                <p>Predicted Demand</p>
+                <h3 id="demand">-- <small>kW</small></h3>
+                <span>Forecast value</span>
+            </article>
+            <article class="metric">
+                <p>Power Source Mode</p>
+                <h3 id="mode">--</h3>
+                <span>Based on switching rules</span>
+            </article>
+            <article class="metric">
+                <p>Overload Alert</p>
+                <h3 id="alert">--</h3>
+                <span>Triggers at 200 kW or above</span>
+            </article>
+        </section>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">FORECAST DATA</p>
+                    <h2>Hourly Demand Forecast</h2>
+                </div>
+                <span id="record-count">0 records</span>
+            </div>
+            <p id="message">Your forecast data will appear here once connected.</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Demand (kW)</th>
+                            <th>Power Mode</th>
+                            <th>Critical Alert</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forecast-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>EnergyGrid · Smart Energy Microgrid & Demand Forecasting</footer>
+    <script src="app.js"></script>
+</body>
+</html>

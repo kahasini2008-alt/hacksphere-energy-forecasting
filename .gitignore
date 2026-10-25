@@ -1,0 +1,10 @@
+
+node_modules/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+predictions.csv
+dashboard_data.csv
+quick_test_predictions.csv
